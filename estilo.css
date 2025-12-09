@@ -1,0 +1,406 @@
+/* --------------------------------------------------- */
+/* FONTES FEÉRICAS                    */
+/* --------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+
+/* --------------------------------------------------- */
+/* TEMA – DARK MODE                   */
+/* --------------------------------------------------- */
+
+:root,
+:root[data-theme="dark"] {
+    /* Cores feéricas originais */
+    --cor-fundo: #0d0d0f;
+    --cor-texto: #e7e4d9;
+    --cor-borda: #bfa76a;
+    --cor-hover: #dfc98b;
+    --cor-card: rgba(255,255,255,0.05);
+    /* Cabeçalho e links */
+    --cor-header: rgba(0, 0, 0, 0.25);
+    --cor-menu-link: #e7e4d9;
+}
+
+
+/* --------------------------------------------------- */
+/* TEMA – LIGHT MODE                  */
+/* --------------------------------------------------- */
+
+:root[data-theme="light"] {
+    /* Cores feéricas originais */
+    --cor-fundo: #f4f1e8;
+    --cor-texto: #3a362e;
+    --cor-borda: #d6c48a;
+    --cor-hover: #8f7a45;
+    --cor-card: rgba(0,0,0,0.05);
+    /* Cabeçalho e links */
+    --cor-header: rgba(255,255,255,0.7);
+    --cor-menu-link: #3a362e;
+}
+
+
+/* --------------------------------------------------- */
+/* ESTILO GLOBAL                     */
+/* --------------------------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Cinzel", serif;
+    color: var(--cor-hover);
+}
+
+a {
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+/* --------------------------------------------------- */
+/* CABEÇALHO / NAVBAR (Estrutura do IVE) */
+/* --------------------------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: var(--cor-header);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--cor-borda);
+    padding: 0.7rem 1.5rem;
+    transition: .3s;
+}
+
+/* Novo Estilo para Logo de Texto */
+.header-logo .logo-text {
+    font-family: "Cinzel", serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--cor-hover); /* Usa a cor de destaque */
+    display: block;
+    line-height: 1;
+    transition: .3s;
+}
+
+.header-logo .logo-text:hover {
+    text-shadow: 0 0 6px var(--cor-hover);
+}
+
+.header-toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+/* Ícone de tema */
+#toggleTheme {
+    font-size: 1.9rem;
+    cursor: pointer;
+    margin-right: 1.5rem;
+    color: var(--cor-hover);
+}
+
+/* Menu Mobile Toggle Button */
+.btn-menu-mobile {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--cor-texto);
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    color: var(--cor-hover);
+}
+
+
+/* Menu Desktop (Esconde por padrão, só aparece no @media) */
+.menu-desktop {
+    display: none;
+}
+
+/* Menu Base (ajuda o menu mobile a ser vertical) */
+.menu {
+    display: flex;
+    flex-direction: column; /* Padrão vertical, será sobrescrito no desktop */
+}
+
+
+/* Menu Mobile (Esconde fora da tela) */
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--cor-fundo);
+    width: 75%;
+    height: 100vh;
+    border-left: 1px solid var(--cor-borda);
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    transition: .3s ease-in-out;
+    transform: translateX(100%);
+    z-index: 9998;
+}
+
+.menu-mobile.active {
+    transform: translateX(0%);
+}
+
+.menu-mobile .menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.6rem;
+}
+
+.menu-mobile .menu-link {
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.menu-mobile .menu-text {
+    color: var(--cor-texto);
+    font-size: 1.8rem;
+    font-family: "Cinzel", serif;
+    transition: .3s;
+}
+
+.menu-mobile .menu-text:hover {
+    color: var(--cor-hover);
+    text-shadow: 0 0 5px var(--cor-hover);
+}
+
+
+/* --------------------------------------------------- */
+/* HOME                         */
+/* --------------------------------------------------- */
+
+#home {
+    padding-top: 7.5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.main-content h1 {
+    max-width: 800px;
+    margin: auto;
+    font-size: 2.6rem;
+    padding-top: 1rem;
+}
+
+.redes-sociais {
+    padding: 0;
+}
+
+.redes-sociais li {
+    display: inline-block;
+}
+
+.redes-sociais i {
+    font-size: 2.3rem;
+    margin: 1rem;
+    color: var(--cor-hover);
+    transition: .3s;
+}
+
+.redes-sociais i:hover {
+    color: white;
+    text-shadow: 0 0 10px var(--cor-hover);
+}
+
+
+/* --------------------------------------------------- */
+/* LIVROS / CARDS                   */
+/* --------------------------------------------------- */
+
+/* Nova classe para limitar o tamanho das imagens */
+.img-limitada {
+    display: block; /* Para permitir margem automática */
+    max-width: 250px; /* Limita a largura máxima da imagem (AJUSTADO) */
+    margin: 0 auto; /* Centraliza a imagem na coluna */
+}
+
+.sombra {
+    box-shadow: 0 0 15px rgba(223, 201, 139, 0.4);
+    border-radius: 12px;
+}
+
+section {
+    padding: 5rem 1.5rem;
+}
+
+.albuns ul {
+    list-style: none;
+    padding: 0;
+}
+
+.albuns li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    color: var(--cor-texto);
+    margin-bottom: 0.5rem;
+}
+
+.albuns li i {
+    color: var(--cor-hover);
+    margin-right: 8px;
+}
+
+
+/* --------------------------------------------------- */
+/* SOBRE                         */
+/* --------------------------------------------------- */
+
+.sobre p {
+    font-size: 1.6rem;
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+
+/* --------------------------------------------------- */
+/* CONTATO (Estilo Simples)                   */
+/* --------------------------------------------------- */
+
+#contato {
+    padding: 5rem 1.5rem;
+}
+
+
+/* --------------------------------------------------- */
+/* FOOTER                        */
+/* --------------------------------------------------- */
+
+footer {
+    border-top: 1px solid var(--cor-borda);
+    background: var(--cor-header);
+    padding: 2rem 0;
+    font-size: 1.4rem;
+}
+
+
+/* --------------------------------------------------- */
+/* MEDIDAS RESPONSIVAS (Corrigido Menu Desktop) */
+/* --------------------------------------------------- */
+
+/* Mobile e Telas menores que 768px */
+@media (max-width: 768px) {
+    .main-content h1 {
+        font-size: 2.1rem;
+    }
+}
+
+
+/* Tablets e Telas Médias (Menu Desktop Aparece) */
+@media (min-width: 768px) {
+    /* Esconde o menu mobile */
+    .btn-menu-mobile {
+        display: none;
+    }
+
+    /* Mostra o menu desktop */
+    .menu-desktop {
+        display: flex;
+        min-width: 40%;
+        justify-content: flex-start;
+        order: -1;
+    }
+    
+    /* CORREÇÃO: Força o menu a ser horizontal */
+    .menu-desktop .menu-principal {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .menu-desktop .menu-item {
+        /* Garante que os itens não ocupem 100% da largura */
+        width: auto;
+    }
+
+    header {
+        padding: 1rem 4rem;
+    }
+
+    .menu {
+        gap: 2rem;
+    }
+
+    .menu-text {
+        font-family: "Cinzel", serif;
+        font-size: 1.6rem;
+        transition: .3s;
+        color: var(--cor-menu-link);
+    }
+
+    .menu-text:hover {
+        color: var(--cor-hover);
+        text-shadow: 0 0 6px var(--cor-hover);
+    }
+
+    /* Alinha o toggle à direita */
+    .header-toggle {
+        min-width: 20%;
+    }
+
+    h1 { font-size: 3.5rem; }
+    h3 { font-size: 2.2rem; }
+
+    #home {
+        padding-top: 10rem;
+    }
+
+    section {
+        padding: 7rem 4rem;
+    }
+}
+
+
+/* Largura 992px */
+@media (min-width: 992px) {
+    /* Removendo esta regra, pois a classe .img-limitada fará o trabalho de limitar */
+    /* .sombra {
+        width: 90%;
+    } */
+
+    .main-content h1 {
+        font-size: 4rem;
+    }
+}
+
+
+/* Extra grande – desktops maiores */
+@media (min-width: 1200px) {
+    .main-content h1 {
+        font-size: 4.5rem;
+    }
+
+    section {
+        padding: 8rem 10rem;
+    }
+
+    .header-logo .logo-text {
+        font-size: 3.5rem;
+    }
+}

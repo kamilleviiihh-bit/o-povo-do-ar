@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Povo do Ar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header class="feerico-nav fixed-top"> <nav class="menu-desktop"> <ul class="menu menu-principal">
+                <li class="menu-item"><a class="menu-link" href="#home"><span class="menu-text">Home</span></a></li>
+                <li class="menu-item"><a class="menu-link" href="#livros"><span class="menu-text">Livros</span></a></li>
+                <li class="menu-item"><a class="menu-link" href="#sobre"><span class="menu-text">Sobre</span></a></li>
+                <li class="menu-item"><a class="menu-link" href="#contato"><span class="menu-text">Contato</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="header-logo">
+            <a href="#home" class="logo-link">
+                <span class="logo-text">O Povo do Ar</span>
+            </a>
+        </div>
+
+        <div class="header-toggle"> <i class="bi bi-sun" id="toggleTheme"></i>
+
+            <button id="menuHamburger" class="btn-menu-mobile">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <nav class="menu-mobile menu menu-principal" id="menuMobile">
+        <ul class="menu-list">
+            <li class="menu-item"><a href="#home" class="menu-link"><span class="menu-text">Home</span></a></li>
+            <li class="menu-item"><a href="#livros" class="menu-link"><span class="menu-text">Livros</span></a></li>
+            <li class="menu-item"><a href="#sobre" class="menu-link"><span class="menu-text">Sobre</span></a></li>
+            <li class="menu-item"><a href="#contato" class="menu-link"><span class="menu-text">Contato</span></a></li>
+        </ul>
+    </nav>
+
+    <main id="home">
+        <section class="main-content text-center">
+            <h1>O Povo do Ar: poder, magia e segredos nas terras de Elfhame.</h1>
+
+            <ul class="redes-sociais">
+                <li><a href="#"><i class="bi bi-github"></i></a></li>
+                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="#"><i class="bi bi-book"></i></a></li>
+                <li><a href="#"><i class="bi bi-stars"></i></a></li>
+            </ul>
+        </section>
+    </main>
+
+    <section class="albuns" id="livros">
+        <h3 class="text-center mb-4">Livros</h3>
+
+        <div class="container">
+
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-4">
+                    <img src="img-p/o-principe-cruel.png" class="img-fluid sombra img-limitada" alt="Capa do livro O Príncipe Cruel">
+                </div>
+                <div class="col-lg-8">
+                    <h3>O Príncipe Cruel</h3>
+                    <p>
+                        Primeiro livro da trilogia, apresentando Jude Duarte, uma humana criada entre feéricos.
+                        Ambiciosa e determinada, ela enfrenta intrigas, traições e o arrogante príncipe Cardan.
+                    </p>
+                    <ul>
+                        <li><i class="bi bi-moon-stars-fill"></i> Intrigas, política e ambição.</li>
+                        <li><i class="bi bi-gem"></i> Estética feérica deslumbrante.</li>
+                        <li><i class="bi bi-headphones"></i> Um começo intenso e cheio de tensão.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5 flex-lg-row-reverse">
+                <div class="col-lg-4">
+                    <img src="img-p/o-rei-perverso.png" class="img-fluid sombra img-limitada" alt="Capa do livro O Rei Perverso">
+                </div>
+                <div class="col-lg-8">
+                    <h3>O Rei Perverso</h3>
+                    <p>
+                        Segundo livro: manipulação, alianças frágeis e poder instável. Jude e Cardan entram
+                        em um jogo ainda mais perigoso, cheio de reviravoltas.
+                    </p>
+                    <ul>
+                        <li><i class="bi bi-moon-stars-fill"></i> Rivalidade e manipulação.</li>
+                        <li><i class="bi bi-heart-fill"></i> Relação intensa e complexa.</li>
+                        <li><i class="bi bi-headphones"></i> Momentos chocantes e imprevisíveis.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-4">
+                    <img src="img-p/a-rainha-do-nada.png" class="img-fluid sombra img-limitada" alt="Capa do livro A Rainha do Nada">
+                </div>
+                <div class="col-lg-8">
+                    <h3>A Rainha do Nada</h3>
+                    <p>
+                        Conclusão épica. Jude retorna ao poder enquanto segredos e alianças colidem no destino de Elfhame.
+                    </p>
+                    <ul>
+                        <li><i class="bi bi-moon-stars-fill"></i> Final emocionante.</li>
+                        <li><i class="bi bi-heart-fill"></i> Fechamento do arco Jude/Cardan.</li>
+                        <li><i class="bi bi-gem"></i> Desfecho memorável e poderoso.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h3 class="text-center mb-4">Sobre o universo</h3>
+
+        <div class="container row mx-auto">
+            <div class="col-lg-4">
+                <img src="img-p/elfhame.jpg" class="img-fluid sombra img-limitada" alt="Ilustração do mapa de Elfhame">
+            </div>
+
+            <div class="col-lg-8">
+                <p>
+                    <strong>O Povo do Ar</strong> é uma série de fantasia escrita por Holly Black,
+                    ambientada em Elfhame — um reino feérico cheio de magia, política e perigo.
+                </p>
+                <p>
+                    A história segue <strong>Jude Duarte</strong>, uma humana criada entre criaturas imortais.
+                    Ainda assim, ela deseja poder — e fará o que for preciso para conquistá-lo.
+                </p>
+                <p>
+                    A série é famosa por sua estética feérica, personagens moralmente complexos
+                    e pela relação intensa entre Jude e <strong>Cardan</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="text-center py-3">
+        <p>&copy; 2025 Inspirado na série O Povo do Ar. Projeto educativo.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
