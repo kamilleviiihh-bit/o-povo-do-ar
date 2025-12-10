@@ -46,7 +46,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 62.5%;
+    font-size: 62.5%; /* Base: 1rem = 10px */
 }
 
 body {
@@ -90,7 +90,7 @@ header {
 /* Novo Estilo para Logo de Texto */
 .header-logo .logo-text {
     font-family: "Cinzel", serif;
-    font-size: 2.8rem;
+    font-size: 3.2rem; /* Aumentado */
     font-weight: 700;
     color: var(--cor-hover); /* Usa a cor de destaque */
     display: block;
@@ -111,7 +111,7 @@ header {
 
 /* Ícone de tema */
 #toggleTheme {
-    font-size: 1.9rem;
+    font-size: 2.4rem; /* Aumentado */
     cursor: pointer;
     margin-right: 1.5rem;
     color: var(--cor-hover);
@@ -124,7 +124,7 @@ header {
     cursor: pointer;
     color: var(--cor-texto);
     display: flex;
-    font-size: 3rem;
+    font-size: 3.2rem; /* Aumentado */
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
@@ -181,7 +181,7 @@ header {
 
 .menu-mobile .menu-text {
     color: var(--cor-texto);
-    font-size: 1.8rem;
+    font-size: 2rem; /* Aumentado */
     font-family: "Cinzel", serif;
     transition: .3s;
 }
@@ -205,7 +205,7 @@ header {
 .main-content h1 {
     max-width: 800px;
     margin: auto;
-    font-size: 2.6rem;
+    font-size: 3.2rem; /* Aumentado */
     padding-top: 1rem;
 }
 
@@ -218,7 +218,7 @@ header {
 }
 
 .redes-sociais i {
-    font-size: 2.3rem;
+    font-size: 2.8rem; /* Aumentado */
     margin: 1rem;
     color: var(--cor-hover);
     transition: .3s;
@@ -257,7 +257,7 @@ section {
 
 .albuns li {
     font-family: "Montserrat", sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.8rem; /* Aumentado */
     color: var(--cor-texto);
     margin-bottom: 0.5rem;
 }
@@ -267,13 +267,17 @@ section {
     margin-right: 8px;
 }
 
+.albuns p {
+    font-size: 1.9rem;
+}
+
 
 /* --------------------------------------------------- */
 /* SOBRE                         */
 /* --------------------------------------------------- */
 
 .sobre p {
-    font-size: 1.6rem;
+    font-size: 1.8rem; /* Aumentado */
     text-align: justify;
     line-height: 1.8;
     margin-bottom: 1.5rem;
@@ -297,7 +301,7 @@ footer {
     border-top: 1px solid var(--cor-borda);
     background: var(--cor-header);
     padding: 2rem 0;
-    font-size: 1.4rem;
+    font-size: 1.6rem; /* Aumentado */
 }
 
 
@@ -308,7 +312,11 @@ footer {
 /* Mobile e Telas menores que 768px */
 @media (max-width: 768px) {
     .main-content h1 {
-        font-size: 2.1rem;
+        font-size: 2.6rem; /* Ajustado */
+    }
+    
+    h3 { 
+        font-size: 2.4rem; /* Ajustado */
     }
 }
 
@@ -349,7 +357,7 @@ footer {
 
     .menu-text {
         font-family: "Cinzel", serif;
-        font-size: 1.6rem;
+        font-size: 1.8rem; /* Aumentado */
         transition: .3s;
         color: var(--cor-menu-link);
     }
@@ -364,8 +372,8 @@ footer {
         min-width: 20%;
     }
 
-    h1 { font-size: 3.5rem; }
-    h3 { font-size: 2.2rem; }
+    h1 { font-size: 4rem; } /* Aumentado */
+    h3 { font-size: 2.8rem; } /* Aumentado */
 
     #home {
         padding-top: 10rem;
@@ -379,13 +387,13 @@ footer {
 
 /* Largura 992px */
 @media (min-width: 992px) {
-    /* Removendo esta regra, pois a classe .img-limitada fará o trabalho de limitar */
-    /* .sombra {
-        width: 90%;
-    } */
 
     .main-content h1 {
-        font-size: 4rem;
+        font-size: 4.5rem; /* Aumentado */
+    }
+    
+    h3 {
+        font-size: 3.2rem; /* Aumentado */
     }
 }
 
@@ -393,7 +401,7 @@ footer {
 /* Extra grande – desktops maiores */
 @media (min-width: 1200px) {
     .main-content h1 {
-        font-size: 4.5rem;
+        font-size: 5rem; /* Aumentado */
     }
 
     section {
@@ -401,6 +409,6 @@ footer {
     }
 
     .header-logo .logo-text {
-        font-size: 3.5rem;
+        font-size: 3.8rem; /* Aumentado */
     }
 }
